@@ -45,12 +45,17 @@ class cartController extends Controller
             return $cartItem->id === $request->id;
         });
         if ($dubl->isNotEmpty()) {
-            toastr()->warning('Item is already in Your Cart !');
+          
+            toastr()->warning('product is already in cart !');
 
-            return redirect()->back();
+        
+        
+
+
+
         };
 
-
+     
 
         ///////////////////////////////////////////////////
 
@@ -108,17 +113,12 @@ class cartController extends Controller
 
         /////////////////////////////////////////
 
-
-
-
-
-
-
-
         Cart::add($request->id, $request->name, 1, $request->price)->associate('App\product', 'App\orderItem');
-        toastr()->success('Item has been added to cart !');
+        toastr()->success('product added  Successfully');
 
-        return redirect()->back();
+
+      return redirect()->back();
+      
     }
 
     /**

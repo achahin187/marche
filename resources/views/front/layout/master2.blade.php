@@ -10,6 +10,8 @@
 <link href="{{ asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ asset('plugins/flexslider/flexslider.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('styles/product.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('styles/style-chat.css') }}">
+
 <link rel="stylesheet" type="text/css" href="{{ asset('styles/product_responsive.css') }}">
 
 @toastr_css
@@ -253,7 +255,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 @jquery
 @toastr_js
 @toastr_render
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+@stack('js')
+
 <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+
 <script src="{{ asset('styles/bootstrap-4.1.2/popper.js') }}"></script>
 <script src="{{ asset('styles/bootstrap-4.1.2/bootstrap.min.js') }}"></script>
 <script src="{{ asset('plugins/greensock/TweenMax.min.js') }}"></script>
@@ -267,5 +276,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{ asset('plugins/parallax-js-master/parallax.min.js') }}"></script>
 <script src="{{ asset('plugins/flexslider/jquery.flexslider-min.js') }}"></script>
 <script src="{{ asset('js/product.js') }}"></script>
+
 </body>
 </html>

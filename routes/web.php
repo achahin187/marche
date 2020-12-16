@@ -53,6 +53,9 @@ Route::get('/home/result','productController@search')->name('search');
 Route::resource('/profile','profileController');
 ///route for vendors
 Route::resource('/vendor','vendorController');
+////route for messages
+Route::resource('/chat','MessageController');
+
 
 
 

@@ -87,9 +87,13 @@
                 <table class="table table-striped">
                     <tr>
                         <th>Order ID</th>
+                        <th>product_name</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Image</th>
+                        <th>Vendor_Name</th>
+
+
                     </tr>
                     <tr>
                         <td>{{$order->id}}</td>

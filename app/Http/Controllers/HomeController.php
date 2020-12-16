@@ -26,13 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-           $view=views::first();
-      event(new pageViewer($view));
+     
 
         $products=product::inRandomOrder()->paginate(6);
         $order=order::all();
     
-        return view('front.home',compact('products','view','order'));
+        return view('front.home',compact('products','order'));
 
     }
 

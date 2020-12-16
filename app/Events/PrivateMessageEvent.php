@@ -9,21 +9,20 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use App\views;
 
-class pageViewer
+class PrivateMessageEvent implements ShouldBroadcast 
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+    public $data;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public $view;
-    public function __construct(views $view)
+    public function __construct($data)
     {
-        $this->view=$view;
+        $this->data=$data;
     }
 
     /**
@@ -33,6 +32,6 @@ class pageViewer
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new  Channel('private-channel');
     }
 }

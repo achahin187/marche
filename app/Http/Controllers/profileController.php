@@ -17,6 +17,8 @@ class profileController extends Controller
      */
     public function index()
     {
+    
+
     }
 
     /**
@@ -52,7 +54,11 @@ class profileController extends Controller
         $vendor=DB::table('vendors')
         ->where('id','=', Auth::user()->id)
         ->first();
-        return view('front.profile',compact('user','vendor'));
+
+        //////////////
+        $users=User::where('id' ,'!=' ,Auth::id())->get();
+        $this->data['users']=$users;
+        return view('front.profile',compact('user','vendor','users'));
 
     }
 
